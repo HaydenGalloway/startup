@@ -13,6 +13,6 @@ Introducing Santa's Helper. Gift lists amongst family and and friends to make th
 ## Wireframe
 
 ![Login](Login.png)
-![Home Page]("Home Page.png")
+![Home Page](HomePage.png)
 ![Lists](Lists.png)
 ![People](People.png)
