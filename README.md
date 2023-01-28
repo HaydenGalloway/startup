@@ -11,3 +11,8 @@ Introducing Santa's Helper. Gift lists amongst family and and friends to make th
 - Reserve gifts you want to give from other lists in your group.
 
 ## Wireframe
+
+![Login](Login.png)
+![Home Page]("Home Page.png")
+![Lists](Lists.png)
+![People](People.png)
