@@ -1,8 +1,12 @@
-# startup
+# Santa's Helper
 
-This is going to be incredible.
+As families gather together at christmas time, gift exchanges are necessary.
 
-Let's go. Making a change.
+How do you know what to give them without explicitly asking? How do you know someone else hasn't already gifted the same thing you are wanting to give.
 
-Ok, so I really don't love the VS Code tools to manage git outsite of the terminal.
-When I have to type the command in the terminal, I know exactly what is happening and I can see the output in the console.
+Introducing Santa's Helper. Gift lists amongst family and and friends to make the holiday's that much easier.
+
+- Make your wish list and check it twice.
+- Share your list with your group.
+- Reserve gifts you want to give from other lists in your group.
+
