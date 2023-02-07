@@ -17,3 +17,6 @@ Introducing Santa's List. Gift lists amongst family and and friends to make the 
 ![Home Page](HomePage.png)
 ![Lists](Lists.png)
 ![People](People.png)
+
+## HTML
+The calendar isn't as bad as they say. The default isn't bad.
