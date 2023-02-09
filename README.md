@@ -20,3 +20,8 @@ Introducing Santa's List. Gift lists amongst family and and friends to make the 
 
 ## HTML
 The calendar isn't as bad as they say. The default isn't bad.
+
+## Things I learned from the Simon assignment and the html assignments
+- Be deliberate with your html tags. There's a specific purpose, structure, and hierarchy.
+- Make changes often, deploy often.
+- Make smaller commits
