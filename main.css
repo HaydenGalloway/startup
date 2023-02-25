@@ -22,3 +22,21 @@ th {
     color: #fff;
     background-color: #1abc9c;
 }
+
+.center {
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+  
+@media (max-height: 600px) {
+    header {
+        display: none;
+    }
+    footer {
+        display: none;
+    }
+    main {
+        flex: 1 100vh;
+    }
+}
