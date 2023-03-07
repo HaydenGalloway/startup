@@ -25,3 +25,7 @@ The calendar isn't as bad as they say. The default isn't bad.
 - Be deliberate with your html tags. There's a specific purpose, structure, and hierarchy.
 - Make changes often, deploy often.
 - Make smaller commits
+
+## Javascript Simon
+- Adding onClick events initialized the js, you can then add the .js at the bottom of the page.
+- 
