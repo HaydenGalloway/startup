@@ -28,4 +28,8 @@ The calendar isn't as bad as they say. The default isn't bad.
 
 ## Javascript Simon
 - Adding onClick events initialized the js, you can then add the .js at the bottom of the page.
-- 
+
+## Startup JS Take-Aways
+- As for now, local storage is where the data is stored, but that will change.
+- Using the constructor in a class to set the default state of the app is really helpful.
+- Some instances the event listener needs to be added in the html.
