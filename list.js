@@ -1,12 +1,6 @@
 
 let tableData = [];
 
-function getPlayerName() {
-  return localStorage.getItem('userName') ?? 'Mystery player';
-}
-
-const playerNameEl = document.querySelector('.player-name');
-playerNameEl.textContent = this.getPlayerName();
 
 function addTableRow(item, description, source) {
   let newRow = {
@@ -14,45 +8,45 @@ function addTableRow(item, description, source) {
     description: description,
     source: source
   };
+
   tableData.push(newRow);
+
   refreshTable();
 }
 
+// Define a function to refresh the table with the current data
 function refreshTable() {
-  let table = document.getElementById("list-table");
-  table.innerHTML = "";
+  let table = document.getElementById("my-table-body");
+
   for (let i = 0; i < tableData.length; i++) {
     let row = document.createElement("tr");
-    // item
+
     let itemCell = document.createElement("td");
     itemCell.innerHTML = tableData[i].item;
     row.appendChild(itemCell);
-    // description
+
     let descriptionCell = document.createElement("td");
     descriptionCell.innerHTML = tableData[i].description;
     row.appendChild(descriptionCell);
-    // source
+
     let sourceCell = document.createElement("td");
     sourceCell.innerHTML = tableData[i].source;
     row.appendChild(sourceCell);
-    // row
+
+    // Add the row to the table
     table.appendChild(row);
   }
 }
 
-// Add an event listener for the add button
 let addButton = document.getElementById("add-button");
 addButton.addEventListener("click", function() {
-  // Get the values from the input fields
   let itemValue = document.getElementById("item").value;
   let descriptionValue = document.getElementById("description").value;
-  let sourceValue = document.getElementById("whereToBuy").value;
+  let sourceValue = document.getElementById("where-to-buy").value;
 
-  // Add a new row to the table with the input values
   addTableRow(itemValue, descriptionValue, sourceValue);
 
-  // Clear the input fields
   document.getElementById("item").value = "";
   document.getElementById("description").value = "";
-  document.getElementById("whereToBuy").value = "";
+  document.getElementById("where-to-buy").value = "";
 });
