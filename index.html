@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>🎅 Santa's List</title>
+  <script src="login.js"></script>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
 </head>
@@ -43,16 +44,21 @@
             Login to Santa's List
           </div>
           <div class="card-body">
+            <div>
+              <input type="text" id="name" placeholder="Your name here" />
+              <button class="btn btn-teal text-white" onclick="login()">Login</button>
+            </div>
             <form>
               <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" class="form-control" id="username" name="username">
               </div>
+              <!-- <label for="username">Username</label> -->
+              <input type="text" class="form-control" id="username" name="username">
+              
               <!-- <div class="form-group">
                 <label for="password">Password</label>
                 <input type="password" class="form-control" id="password" name="password">
               </div> -->
-              <button type="submit" class="btn btn-teal text-white" onclick="login()">Login</button>
+              <button class="btn btn-teal text-white" onclick="login()">Login</button>
               <!-- <a href="signup.html" class="btn btn-secondary">Create a New Account</a> -->
             </form>
           </div>

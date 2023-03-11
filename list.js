@@ -1,23 +1,16 @@
-// Create an array to store the table data
+
 let tableData = [];
 
-// Define a function to add a new row to the table
 function addTableRow(item, description, source) {
-  // Create a new object to represent the row data
   let newRow = {
     item: item,
     description: description,
     source: source
   };
-
-  // Add the new row to the table data array
   tableData.push(newRow);
-
-  // Refresh the table to display the new row
   refreshTable();
 }
 
-// Define a function to refresh the table with the current data
 function refreshTable() {
   // Get a reference to the table element
   let table = document.getElementById("list-table");
