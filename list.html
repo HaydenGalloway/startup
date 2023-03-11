@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Santa's List - People</title>
+    <title>My List</title>
+    <script src="list.js"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
   </head>
@@ -36,33 +37,41 @@
 
     <main class="container flex-grow-1 py-4">
       <br>
-      <div class="players"><span class="player-name">'s List. Check it out!</span>
-        <div class="row">
-          <div class="col-sm-8 offset-sm-2">
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th class="bg-teal text-white">Items</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Bike</td>
-                </tr>
-                <tr>
-                  <td>Gym Membership</td>
-                </tr>
-                <tr>
-                  <td>Netflix Password</td>
-                </tr>
-              </tbody>
-            </table>
+
+      <div class="players">This is <span class="player-name">your list</span>. Add items.</div>
+      <div class="container">
+          <div class="form-row flex-column">
+            <div class="form-group col-md-4 col-sm-12">
+              <label for="item">Item:</label>
+              <input type="text" class="form-control" id="item">
+            </div>
+            <div class="form-group col-md-4 col-sm-12">
+              <label for="whereToBuy">Where to Buy:</label>
+              <input type="text" class="form-control" id="whereToBuy">
+            </div>
+            <div class="form-group col-md-4 col-sm-12">
+              <label for="description">Description:</label>
+              <input type="text" class="form-control" id="description">
+            </div>
           </div>
           <div class="col-sm-2">
-            <button class="btn btn-light rounded-pill mt-4">Add an Item</button>
+            <button class="btn btn-light rounded-pill mt-4" id="add-button">Add an Item</button>
           </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-8 offset-sm-2">
+          <table class="table table-striped" id="list-table">
+            <thead>
+              <td>Items</td>
+              <td>Description</td>
+              <td>Where to Buy</td>
+            </thead>
+            <tbody></tbody>
+          </table>
         </div>
-      </main>
+      </div>
+    </main>
 
     <footer class="bg-dark text-white fixed-bottom">
       <div class="container text-center">
