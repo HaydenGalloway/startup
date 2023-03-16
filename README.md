@@ -33,3 +33,6 @@ The calendar isn't as bad as they say. The default isn't bad.
 - As for now, local storage is where the data is stored, but that will change.
 - Using the constructor in a class to set the default state of the app is really helpful.
 - Some instances the event listener needs to be added in the html.
+
+## Node
+- include node-modules in .gitignore
