@@ -41,7 +41,7 @@ The calendar isn't as bad as they say. The default isn't bad.
 - make sure and update your gitignore for your startup applicaiton
 - your deployService sh file has changed. Make sure and run the chmod on the file to make it accessible.
 - Simon app had a cool calc for the height "height: calc(100px + 1em);" in the css file.
-- your index js files don't speak to each other from the front end and backend.
+- your index.js files don't speak to each other from the front end and backend.
 - make sure your index file has the correct folder name passed in for express.static for your static files.
-- what the class video two more times.
-- Simon is listening ono 3000, but your app will be on 4000.
+- watch the class video two more times.
+- Simon is listening on 3000, but your app will be on 4000.
