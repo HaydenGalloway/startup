@@ -45,3 +45,11 @@ The calendar isn't as bad as they say. The default isn't bad.
 - make sure your index file has the correct folder name passed in for express.static for your static files.
 - watch the class video two more times.
 - Simon is listening on 3000, but your app will be on 4000.
+
+## Simon DB
+- UUID ==== Universally Unique Identifier
+- Cookies store session data
+- Logging out removes the session cookie.
+- Cookies contian tokens, or name value pairs.
+- Login and create user can happen at the same time.
+- Logout removes the authentication cookies.
