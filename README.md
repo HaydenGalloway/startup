@@ -50,6 +50,13 @@ The calendar isn't as bad as they say. The default isn't bad.
 - UUID ==== Universally Unique Identifier
 - Cookies store session data
 - Logging out removes the session cookie.
-- Cookies contian tokens, or name value pairs.
 - Login and create user can happen at the same time.
 - Logout removes the authentication cookies.
+- you might have to log out and log in to restart env variables.
+
+## Simon Login
+- 404 === not found.
+- 401 === auth error.
+- denial of service attack attack is a type of cyber attack where an attacker seeks to disrupt the normal functioning of a website, server, or network by overwhelming it with a flood of traffic or requests. The attacker typically does this by using a large number of compromised computers, known as a botnet, to send a huge amount of traffic or requests to the target system, effectively causing it to become unavailable to legitimate users. DOS attacks take forms such as flooding the target system with fake requests, exploiting vulnerabilities in the target's software, or simply overwhelming the system's resources by consuming too much bandwidth or processing powe.
+- Setting cookies is how authorization is possible.
+- Cookies contian tokens, or name value pairs.
