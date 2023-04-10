@@ -29,11 +29,6 @@ The calendar isn't as bad as they say. The default isn't bad.
 ## Javascript Simon
 - Adding onClick events initialized the js, you can then add the .js at the bottom of the page.
 
-## Startup JS Take-Aways
-- As for now, local storage is where the data is stored, but that will change.
-- Using the constructor in a class to set the default state of the app is really helpful.
-- Some instances the event listener needs to be added in the html.
-
 ## Node
 - include node-modules in .gitignore
 
@@ -73,3 +68,10 @@ The calendar isn't as bad as they say. The default isn't bad.
 - Delete the header and footer HTML since they are now represented in app.jsx.
 - Copy the JavaScript over and turn the functions into inner functions of the React component.
 - When running in production, the Simon web service running under Node.js on port 3000 serves up the Simon React application code when the browser requests index.html. 
+
+## Startup JS Take-Aways
+- As for now, local storage is where the data is stored, but that will change.
+- You can use JS to set the default state of the app is really helpful.
+- Some instances the event listener needs to be added in the html.
+- JS helps you template and update tables.
+- You are able to do a lot by just updating local storage.
