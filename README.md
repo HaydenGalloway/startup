@@ -66,3 +66,10 @@ The calendar isn't as bad as they say. The default isn't bad.
 - Clients communicate to server, server talks back with updates from other clients.
 - You can see the messages from web socket in tools > network > messages.
 - Ping and Pong is what keeps the connection alive.
+
+## Simon React
+- hooks are functions that return values and functions to change the value.
+- The class attribute is renamed to className so that it doesn't conflict with the JavaScript keyword class.
+- Delete the header and footer HTML since they are now represented in app.jsx.
+- Copy the JavaScript over and turn the functions into inner functions of the React component.
+- When running in production, the Simon web service running under Node.js on port 3000 serves up the Simon React application code when the browser requests index.html. 
