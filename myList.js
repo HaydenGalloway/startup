@@ -16,7 +16,13 @@ document.addEventListener("DOMContentLoaded", () => {
         </tr>`;
       tableBody.insertAdjacentHTML("beforeend", row);
     });
+    updateItemCount(list.length);
   }
+  
+  function updateItemCount(count) {
+    const itemCountSpan = document.getElementById("itemCount");
+    itemCountSpan.innerText = `(${count} items)`;
+  }  
 
   function saveList(list) {
     localStorage.setItem("myList", JSON.stringify(list));
