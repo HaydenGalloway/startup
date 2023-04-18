@@ -12,7 +12,7 @@ export function Login({ userName, authState, onAuthChange }) {
       <div className='green-border'>
         {authState !== AuthState.Unknown && <h2>Make a List. Check it twice.</h2>}
         {authState === AuthState.Authenticated && (
-          <Authenticated userName={userName} onLogout={() => onAuthChange(userName, AuthState.Unauthenticated)} />
+          <Authenticated className="mr-2" userName={userName} onLogout={() => onAuthChange(userName, AuthState.Unauthenticated)} />
         )}
         {authState === AuthState.Unauthenticated && (
           <Unauthenticated
