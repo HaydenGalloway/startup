@@ -36,7 +36,7 @@ function App() {
       <header className='container-fluid'>
         <nav className='navbar fixed-top navbar-dark'>
           <div className='navbar-brand'>
-            Santa's List<sup>&reg;</sup>
+            Santa's List 🎅
           </div>
           <menu className='navbar-nav'>
             <li className='nav-item'>

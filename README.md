@@ -75,3 +75,21 @@ The calendar isn't as bad as they say. The default isn't bad.
 - Some instances the event listener needs to be added in the html.
 - JS helps you template and update tables.
 - You are able to do a lot by just updating local storage.
+
+## Startup Service Take-Aways
+- Debugging the WebSocket code was very difficult, but it taught me how to pass values between components.
+    - I was mostly able to make progress by doing a lot of console.log statements in functions. That told me everything that wasn't getting hit.
+- My project has notification for when a user adds and item to their list and when the remove an item to their list.
+- The authentication routs were easiest managed with React. The Router made it much easier.
+- I filtered the image coming image coming through using a tag for 'holidays'.
+- I filtered the quote coming in using the 'love' tag.
+- npm install to get the contents of you package-manger.
+
+## Startup React Take-Aways
+- Getting the React environment correct was the most difficult part of the entire project (maybe besides WebSocket idk).
+    - Setting up the environment variables on a Mac is not fun.
+    - The video to transfer the project to react was one of the most helpful things this semester. So many details are learned in that process. Difficult to teach some of those things without going through the motion and watching a pro (like what to delete from create-react-app).
+- Routing is a very useful tool. I need to learn some more conditional routing.
+- when passing with props, you can use a prop name without dot notation.
+- Virtual dom is what re-renders components bases off of changes in prop data.
+- Data flows from parent to child.
