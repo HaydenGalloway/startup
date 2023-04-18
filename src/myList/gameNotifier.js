@@ -15,7 +15,7 @@ class EventMessage {
 }
 
 class GameEventNotifier {
-  events = [];
+  //events = [];
   handlers = [];
 
   constructor() {
@@ -54,6 +54,7 @@ class GameEventNotifier {
   broadcastEvent(from, type, value) {
     const event = new EventMessage(from, type, value);
     this.socket.send(JSON.stringify(event));
+    this.receiveEvent(event); // Add this line to directly call receiveEvent
   }
 
   addHandler(handler) {
@@ -68,19 +69,12 @@ class GameEventNotifier {
 
   receiveEvent(event) {
     console.log('Received event:', event);
-  
-    // Store the current handlers to a local variable
-    const currentHandlers = [...this.handlers];
-  
-    // Push the event into the events array
-    this.events.push(event);
-  
-    // Iterate over the current handlers and execute them
-    currentHandlers.forEach((handler) => {
-      console.log('Executing handler:', handler);
+    this.handlers.forEach((handler) => {
+      console.log('Calling handler for event:', event);
       handler(event);
     });
-  }
+  }  
+  
 }
 
 const GameNotifier = new GameEventNotifier();

@@ -9,20 +9,21 @@ export function Players(props) {
   const [events, setEvent] = React.useState([]);
 
   React.useEffect(() => {
-    console.log('Adding event handler');
     GameNotifier.addHandler(handleGameEvent);
-
+  
     return () => {
-      console.log('Removing event handler');
       GameNotifier.removeHandler(handleGameEvent);
     };
   }, []);
-
+   
   function handleGameEvent(event) {
     console.log('Handling game event:', event);
-    setEvent([...events, event]);
+    setEvent(prevEvents => {
+      console.log('Updating events state:', [...prevEvents, event]);
+      return [...prevEvents, event];
+    });
   }
-
+  
   function createMessageArray() {
     const messageArray = [];
     for (const [i, event] of events.entries()) {
