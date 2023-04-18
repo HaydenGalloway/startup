@@ -4,9 +4,11 @@ import { Unauthenticated } from './Unauthenticated';
 import { Authenticated } from './authenticated';
 import { AuthState } from './authState';
 
+import './login.css';
+
 export function Login({ userName, authState, onAuthChange }) {
   return (
-    <main className='container-fluid bg-secondary text-center' style={{ minHeight: "100vh" }}>
+    <main className='container-fluid bg-dark-grey text-center' style={{ minHeight: "100vh" }}>
       <div>
         {authState !== AuthState.Unknown && <h2>Make a List. Check it twice.</h2>}
         {authState === AuthState.Authenticated && (
