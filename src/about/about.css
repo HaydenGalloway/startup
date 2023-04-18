@@ -30,3 +30,19 @@
   height: 100%;
   width: 100%;
 }
+
+/* snow background */
+#snow {
+  background-color: #000000;
+  background-image: url('https://www.transparenttextures.com/patterns/snow.png');
+  animation: snowflakes 20s linear infinite;
+}
+
+@keyframes snowflakes {
+  0% {
+    background-position: 0 0, 0 0, 0 0;
+  }
+  100% {
+    background-position: 0 1000px, 0 800px, 0 1200px;
+  }
+}
