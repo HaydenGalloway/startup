@@ -9,14 +9,17 @@ export function Players(props) {
   const [events, setEvent] = React.useState([]);
 
   React.useEffect(() => {
+    console.log('Adding event handler');
     GameNotifier.addHandler(handleGameEvent);
 
     return () => {
+      console.log('Removing event handler');
       GameNotifier.removeHandler(handleGameEvent);
     };
-  });
+  }, []);
 
   function handleGameEvent(event) {
+    console.log('Handling game event:', event);
     setEvent([...events, event]);
   }
 
@@ -24,10 +27,10 @@ export function Players(props) {
     const messageArray = [];
     for (const [i, event] of events.entries()) {
       let message = 'unknown';
-      if (event.type === GameEvent.End) {
-        message = `scored ${event.value.score}`;
-      } else if (event.type === GameEvent.Start) {
-        message = `started a new game`;
+      if (event.type === GameEvent.AddItem) {
+        message = 'added an item';
+      } else if (event.type === GameEvent.RemoveItem) {
+        message = 'removed an item';
       } else if (event.type === GameEvent.System) {
         message = event.value.msg;
       }

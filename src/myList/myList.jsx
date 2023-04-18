@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Players } from './players';
-import { GameNotifier } from './gameNotifier';
+import { GameEvent, GameNotifier } from './gameNotifier';
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
@@ -14,7 +14,6 @@ const MyList = (props) => {
   const [item, setItem] = useState('');
   const [link, setLink] = useState('');
   const { userName } = props; // Get the userName prop
-  const [itemName, setItemName] = useState('');
 
   useEffect(() => {
     fetch('/api/items', { credentials: 'include' })
@@ -40,20 +39,22 @@ const MyList = (props) => {
       const response = await fetch('/api/items', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ itemName }),
+        body: JSON.stringify({ item, link }), // Update the property name to 'item'
       });
   
       if (!response.ok) {
         throw new Error('Failed to add item');
       }
-      const item = await response.json();
-      setItems([...items, item]);
-      setItemName('');
-      GameNotifier.sendAddItemEvent(userName, itemName);
+      const newItemObject = await response.json();
+      const newItem = newItemObject.item;
+      setItems([...items, newItem]);
+      setItem(''); // Reset the item input field
+      setLink(''); // Reset the link input field
+      GameNotifier.sendAddItemEvent(userName);
     } catch (error) {
       console.error(error);
     }
-  };
+  }; 
 
   const removeItem = async (itemId) => {
     try {
@@ -65,8 +66,10 @@ const MyList = (props) => {
       if (!response.ok) {
         throw new Error("Failed to remove item");
       } else {
-        // If the item was removed successfully, update the items list in the local state
+        // Find the removed item in the items array first
+        const removedItem = items.find(item => item._id === itemId);
         setItems(items.filter(item => item._id !== itemId));
+        GameNotifier.sendRemoveItemEvent(userName, removedItem);
       }
     } catch (error) {
       console.error(error);

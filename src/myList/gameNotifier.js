@@ -2,7 +2,8 @@ const GameEvent = {
   System: 'system',
   End: 'gameEnd',
   Start: 'gameStart',
-  AddItem: 'addItem'
+  AddItem: 'addItem',
+  RemoveItem: 'removeItem'
 };
 
 class EventMessage {
@@ -40,8 +41,14 @@ class GameEventNotifier {
     };
   }
 
-  sendAddItemEvent(email, item) {
-    this.broadcastEvent(email, GameEvent.AddItem, { item });
+  sendAddItemEvent(email) {
+    console.log('Sending Add Item event:', email);
+    this.broadcastEvent(email, GameEvent.AddItem, {});
+  }
+
+  sendRemoveItemEvent(email, item) {
+    console.log('Sending Remove Item event:', email, item);
+    this.broadcastEvent(email, GameEvent.RemoveItem, {});
   }
 
   broadcastEvent(from, type, value) {
@@ -50,20 +57,28 @@ class GameEventNotifier {
   }
 
   addHandler(handler) {
+    console.log('Adding handler:', handler);
     this.handlers.push(handler);
   }
 
   removeHandler(handler) {
+    console.log('Removing handler:', handler);
     this.handlers.filter((h) => h !== handler);
   }
 
   receiveEvent(event) {
+    console.log('Received event:', event);
+  
+    // Store the current handlers to a local variable
+    const currentHandlers = [...this.handlers];
+  
+    // Push the event into the events array
     this.events.push(event);
-
-    this.events.forEach((e) => {
-      this.handlers.forEach((handler) => {
-        handler(e);
-      });
+  
+    // Iterate over the current handlers and execute them
+    currentHandlers.forEach((handler) => {
+      console.log('Executing handler:', handler);
+      handler(event);
     });
   }
 }

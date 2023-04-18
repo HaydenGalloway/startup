@@ -1,4 +1,4 @@
-const { MongoClient } = require('mongodb');
+const { MongoClient, ObjectId } = require('mongodb');
 const bcrypt = require('bcrypt');
 const uuid = require('uuid');
 
@@ -13,8 +13,8 @@ if (!userName) {
 const url = `mongodb+srv://${userName}:${password}@${hostname}`;
 
 const client = new MongoClient(url);
-const userCollection = client.db('Santa').collection('user');
-const itemListCollection = client.db('Santa').collection('itemList');
+const userCollection = client.db('Santata').collection('user');
+const itemListCollection = client.db('Santata').collection('itemList');
 
 function getUser(email) {
   return userCollection.findOne({ email: email });
@@ -56,7 +56,7 @@ async function removeItem(token, itemId) {
   const user = await getUserByToken(token);
   if (!user) return null;
 
-  return itemListCollection.deleteOne({ _id: itemId, userId: user._id });
+  return itemListCollection.deleteOne({ _id: ObjectId(itemId), userId: user._id });
 }
 
 async function getUserItems(token) {

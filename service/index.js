@@ -96,7 +96,9 @@ secureApiRouter.post('/items', async (req, res) => {
 secureApiRouter.delete('/items/:itemId', async (req, res) => {
   const itemId = req.params.itemId;
   const authToken = req.cookies[authCookieName];
+  console.log("Removing item:", itemId); // Debugging statement
   const result = await DB.removeItem(authToken, itemId);
+  console.log("Result:", result); // Debugging statement
   res.status(result.deletedCount > 0 ? 204 : 404).send();
 });
 
