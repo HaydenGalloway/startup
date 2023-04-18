@@ -8,8 +8,8 @@ import './login.css';
 
 export function Login({ userName, authState, onAuthChange }) {
   return (
-    <main className='container-fluid bg-dark text-center' style={{ minHeight: "100vh" }}>
-      <div>
+    <main className='container-fluid bg-dark-grey text-center' style={{ minHeight: "100vh" }}>
+      <div className='green-border'>
         {authState !== AuthState.Unknown && <h2>Make a List. Check it twice.</h2>}
         {authState === AuthState.Authenticated && (
           <Authenticated userName={userName} onLogout={() => onAuthChange(userName, AuthState.Unauthenticated)} />

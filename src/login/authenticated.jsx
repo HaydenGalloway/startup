@@ -15,7 +15,7 @@ export function Authenticated(props) {
   }
 
   return (
-    <div className='bg-dark-grey'>
+    <div className='bg-dark green-border'>
       <div className='playerName'>{props.userName}</div>
       <Button variant='primary' onClick={() => navigate('/myList')}>
         My List

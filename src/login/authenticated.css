@@ -7,3 +7,9 @@
 .bg-dark-grey {
   background-color: #213221;
 }
+
+.green-border {
+  border: solid thick rgb(0, 117, 0);
+  border-radius: 8px;
+  padding: 15px;
+}
