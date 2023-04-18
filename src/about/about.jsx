@@ -41,7 +41,7 @@ export function About(props) {
   }
 
   return (
-    <main className='container-fluid bg-secondary text-center'>
+    <main className='container-fluid bg-secondary text-center'style={{ minHeight: "100vh" }}>
       <div>
         <div id='picture' className='picture-box'>
           {imgEl}

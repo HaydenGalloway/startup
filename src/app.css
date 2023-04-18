@@ -4,6 +4,10 @@
   min-width: 375px;
 }
 
+.bg-dark-grey {
+  background-color: #213221;
+}
+
 header {
   flex: 0 80px;
 }

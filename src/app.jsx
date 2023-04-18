@@ -32,7 +32,7 @@ function App() {
   }, [userName]);
 
   return (
-    <div className='body bg-dark text-light'>
+    <div className='body bg-dark-grey text-light'>
       <header className='container-fluid'>
         <nav className='navbar fixed-top navbar-dark'>
           <div className='navbar-brand'>
